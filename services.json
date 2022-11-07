@@ -1,0 +1,32 @@
+[
+    {
+        "serviceName": "Study in Australia",
+        "details": "",
+        "img": "https://img.freepik.com/free-photo/beautiful-shot-sydney-harbor-bridge-with-light-pink-blue-sky_181624-16041.jpg?w=900&t=st=1667857879~exp=1667858479~hmac=cec9fb0d3d8637f9950f1c882fd431990a26967e2f44cdadcec123bd03766b76"
+    },
+    {
+        "serviceName": "Study in USA",
+        "details": "",
+        "img": "https://img.freepik.com/free-photo/statue-liberty-with-cloudy-beautiful-sky_181624-1112.jpg?w=900&t=st=1667857963~exp=1667858563~hmac=1795f006e6eb57e813a1e88daf00bea04d9e98c00e59ab0f9ad9440b7e920647"
+    },
+    {
+        "serviceName": "Study in UK",
+        "details": "",
+        "img": "https://img.freepik.com/free-photo/famous-tower-bridge-evening-london-england_268835-1105.jpg?w=900&t=st=1667857973~exp=1667858573~hmac=59e2935b97c848f126a2af63460ef1c0efd5c13d0df267e02a25a36535cde15e"
+    },
+    {
+        "serviceName": "Study in Germany",
+        "details": "",
+        "img": "https://img.freepik.com/free-photo/berlin-concert-hall-germany_181624-18088.jpg?w=900&t=st=1667858264~exp=1667858864~hmac=e5068ab56427a8f2f589245ca17d4cf7968c9b06d181f414bf10a0721c4b3904"
+    },
+    {
+        "serviceName": "Study in Canada",
+        "details": "",
+        "img": "https://img.freepik.com/free-photo/toronto-sunrise_649448-3470.jpg?w=900&t=st=1667857946~exp=1667858546~hmac=6eca7021e61cc9a3120ff19673c148361ddba0b0f332de12b6a4eb5c033981f0"
+    },
+    {
+        "serviceName": "Study in Denmark",
+        "details": "",
+        "img": "https://img.freepik.com/free-photo/wide-shot-houses-buildings-city-copenhagen-denmark_181624-2166.jpg?w=900&t=st=1667858221~exp=1667858821~hmac=ccfdb28f2cda9e972d1b57f997639b798d8870b3b1d0c71c1336650b5a81ed48"
+    }
+]
