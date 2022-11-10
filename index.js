@@ -41,6 +41,24 @@ async function run() {
             const events = await cursor.limit(3).toArray();
             res.send(events);
         })
+
+
+        // add a service
+
+        app.post('/service', async (req, res) => {
+            const service = req.body;
+            // users.push(user);
+            // console.log(user)
+            const result = await serviceCollection.insertOne(service);
+            service._id = result.insertedId;
+            console.log(result);
+            // res.send(user);
+        })
+
+
+
+
+
         // Review api
         app.post('/reviews', async (req, res) => {
             const review = req.body;
