@@ -19,6 +19,7 @@ console.log(uri);
 async function run() {
     try {
         const serviceCollection = client.db('beyondBorder').collection('services');
+        const reviewsCollection = client.db('beyondBorder').collection('reviews');
 
         app.get('/services', async (req, res) => {
             const query = {};
@@ -40,6 +41,46 @@ async function run() {
             const events = await cursor.limit(3).toArray();
             res.send(events);
         })
+        // Review api
+        app.post('/reviews', async (req, res) => {
+            const review = req.body;
+            const result = await reviewsCollection.insertOne(review);
+            res.send(result);
+        })
+
+        app.get('/reviews', async (req, res) => {
+            const query = {};
+            const cursor = reviewsCollection.find(query);
+            const reviews = await cursor.toArray();
+            res.send(reviews);
+        })
+
+
+        app.get('/userreviews', async (req, res) => {
+            let query = {};
+            if (req.query.email) {
+                query = {
+                    email: req.query.email
+                };
+            }
+            const cursor = reviewsCollection.find(query);
+            const reviews = await cursor.toArray();
+            res.send(reviews);
+        })
+
+        app.delete('/userreviews/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const result = await reviewsCollection.deleteOne(query);
+            res.send(result);
+        })
+
+
+
+        // app.put('/userreviews/:id', async (req, res) => {
+
+        // })
+
     }
     finally {
 
