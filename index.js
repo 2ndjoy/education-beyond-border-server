@@ -55,7 +55,6 @@ async function run() {
             res.send(reviews);
         })
 
-
         app.get('/userreviews', async (req, res) => {
             let query = {};
             if (req.query.email) {
@@ -75,11 +74,26 @@ async function run() {
             res.send(result);
         })
 
+        app.put('/userreviews/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: ObjectId(id) };
+            const review = req.body;
+            const option = { upsert: true };
+            console.log(review)
+
+            const updatedReview = {
+                $set: {
+                    review: review.review
+
+                }
+            }
+            const result = await reviewsCollection.updateOne(filter, updatedReview, option);
+            res.send(result)
+        })
 
 
-        // app.put('/userreviews/:id', async (req, res) => {
 
-        // })
+
 
     }
     finally {
